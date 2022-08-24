@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      
+<h:head>
+    <title>Citizen Registration</title>
+       <link rel="stylesheet" href="navbar.css"></link>
+<link rel="stylesheet" href="body.css"></link>
+  </h:head>
+    
+  <h:body style="font-size: #{DCProfileTabGeneralController.editable ? '100px' : '20px' };">
+    
+    <h:messages globalOnly="true" />
+    <h:link value="Home" outcome="index.jsf"/>&#160;&#160;&#160;
+    <h:link value = "Citizen Registration" outcome = "indiancitizenregistration.jsf" />&#160;&#160;&#160;
+    <h:link value = "Citizen Login" outcome = "indiancitizenlogin.jsf" />&#160;&#160;&#160;
+    <h:link value = "GOI Login" outcome = "goilogin.jsf" />&#160;&#160;
+    <hr/>
+      <h:form>
+      <h3 align="center">Registration of Citizen </h3>
+    
+        <h:panelGrid columns="3">      
+        
+          <h:outputLabel>Citizen Name</h:outputLabel>
+          <h:inputText value="#{ctznBean.ICname}" id="ICname" />
+          <br/>
+          <h:outputLabel>Gender</h:outputLabel>
+          <h:inputText value="#{ctznBean.ICgender}" id="ICgender" />
+          <br/>    
+          <h:outputLabel>Aadhaar Number</h:outputLabel>
+          <h:inputSecret value="#{ctznBean.ICaadhaar}" id="ICaadhaar" />
+          <br/>
+          <h:outputLabel>Mobile Number</h:outputLabel>
+          <h:inputText value="#{ctznBean.ICmobileno}" id="ICmobileno" />
+          <br/>    
+           <h:outputLabel>EmailId</h:outputLabel>
+          <h:inputText value="#{ctznBean.ICemail}" id="ICemail" />
+          <br/>
+          <h:outputLabel>Password</h:outputLabel>
+          <h:inputSecret value="#{ctznBean.ICpwd}" id="ICpwd" />
+          <br/>
+          <h:outputLabel>State of Residence</h:outputLabel>
+          <h:inputText value="#{ctznBean.ICstate}" id="ICstate" />
+          <br/>        
+          <h:commandButton value="Register" action="#{ctznBean.insertcitizen()}"/>
+        </h:panelGrid>
+      </h:form>   
+    <br/>
+  </h:body>
+  <style>
+  .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+  </style>
+  <style>
+body {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/India-0037_-_Red_Fort_%282214262369%29.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+</style>
+</html>

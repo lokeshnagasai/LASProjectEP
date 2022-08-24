@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title >	Indian Citizen Dashboard</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+  </h:head>
+    
+   <h:body style="font-size: #{DCProfileTabGeneralController.editable ? '12px' : '20px' };background-color:tomato;">
+  
+<div class="w3-container">
+<p></p>
+<h1 align = "center"><b>Indian Citizen Dashboard </b></h1>
+<div class="w3-bar w3-border w3-black w3-xlarge">
+  <a href="index.jsf" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">search article by ID</a>
+    <a href="#" class="w3-bar-item w3-button">View all articles</a>
+    <a href="requestamendment.jsf" class="w3-bar-item w3-button">Amendments request</a>
+  <a href="index.jsf" class="w3-bar-item w3-button" >Log out</a>
+</div>
+</div>
+</h:body>
+<style>
+body {
+  background-image: url('https://ferozepur.nic.in/wp-content/themes/district-theme-5/images/news.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</html>
